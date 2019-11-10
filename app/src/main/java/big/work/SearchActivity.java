@@ -1,14 +1,16 @@
-package com.example.androidtest;
+package big.work;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class TeatActivity extends AppCompatActivity {
+import com.example.androidtest.R;
+
+public class SearchActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_teat);
+        setContentView(R.layout.activity_search);
     }
 }
