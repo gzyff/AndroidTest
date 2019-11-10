@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="410dp"
+    android:layout_width="match_parent"
     android:layout_height="70dp"
+    android:gravity="center"
     tools:context="big.work.DemosticActivity">
     <ImageView
-        android:id="@+id/member_image"
+        android:id="@+id/domestic_image"
         android:layout_marginLeft="10dp"
         android:layout_width="55dp"
         android:layout_height="55dp"
@@ -20,36 +20,24 @@
         android:layout_marginLeft="75dp"
         >
         <TextView
-            android:id="@+id/member_user_name"
+            android:id="@+id/user_name"
             android:layout_width="230dp"
             android:layout_height="35dp"
             android:textSize="25dp"
-            android:textColor="#FF7F00"
+            android:textColor="#000000"
             />
         <TextView
-            android:id="@+id/member_chat_context"
+            android:id="@+id/chat_context"
             android:layout_width="230dp"
             android:layout_height="20dp"
             android:textSize="18dp"
             />
     </LinearLayout>
     <TextView
-        android:id="@+id/member_user_level"
-        android:layout_width="40dp"
-        android:layout_height="25dp"
-        android:layout_marginLeft="230dp"
-        android:paddingLeft="6dp"
-        android:textSize="15dp"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:background="@drawable/vip_text"
-        />
-    <TextView
-        android:id="@+id/member_chat_time"
+        android:id="@+id/chat_time"
         android:layout_width="80dp"
         android:layout_height="20dp"
-        android:layout_marginLeft="330dp"
+        android:layout_alignParentRight="true"
         android:textSize="15dp"
         />
-
 </RelativeLayout>

@@ -40,11 +40,11 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         root = inflater.inflate(R.layout.fragment_friend, container, false);
-        /*tabLayout = root.findViewById(R.id.friend_tab);
-        viewpager = root.findViewById(R.id.friend_view_page);*/
+        tabLayout = root.findViewById(R.id.friend_tab);
+        viewpager = root.findViewById(R.id.friend_view_page);
         return root;
     }
-/*    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         MPagerAdapter mPagerAdapter = new MPagerAdapter(getChildFragmentManager());
         initFragment();
@@ -81,7 +81,7 @@ public class HomeFragment extends Fragment {
         public CharSequence getPageTitle(int position) {
             return temp[position];
         }
-    }*/
+    }
 
 
 }

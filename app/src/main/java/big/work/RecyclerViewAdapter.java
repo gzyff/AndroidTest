@@ -27,17 +27,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if(viewType == type_search){
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_search,
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_search_item,
                     parent,false);
             return new SearchViewHolder(view);
         }
         if(viewType == type_domestic){
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_demostic,
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_demostic_item,
                     parent,false);
             return new DomesticViewHolder(view);
         }
         if(viewType == type_member){
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_member,
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_member_item,
                     parent,false);
             return new MemberViewHolder(view);
         }
