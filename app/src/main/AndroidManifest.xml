@@ -9,14 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="big.work.FriendTabActivity"></activity>
+        <activity android:name="big.work.GroupItem1Activity"></activity>
+        <activity android:name="big.work.FriendsItem2Activity" />
+        <activity android:name="big.work.FriendsItem1Activity" />
         <activity android:name="big.work.MemberActivity" />
         <activity android:name="big.work.DemosticActivity" />
         <activity android:name="big.work.SearchActivity" />
-        <activity android:name=".RetrofitDemo" />
-        <activity android:name=".TeatActivity" />
         <activity android:name=".SetActivity" />
-        <activity android:name="big.work.MainActivity" />
         <activity android:name="big.work.Main3Activity" />
         <activity android:name="big.work.LoginActivity">
             <intent-filter>

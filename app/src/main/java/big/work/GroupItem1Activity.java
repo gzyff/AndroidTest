@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.androidtest.R;
 
-public class FriendTabActivity extends AppCompatActivity {
+public class GroupItem1Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_friend_tab);
+        setContentView(R.layout.activity_group_item1);
     }
 }

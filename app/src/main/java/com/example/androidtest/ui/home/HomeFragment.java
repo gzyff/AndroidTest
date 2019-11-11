@@ -19,11 +19,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.androidtest.FriendsFragment;
+import com.example.androidtest.GroupChatFragment;
+import com.example.androidtest.GroupFragment;
 import com.example.androidtest.R;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
+import big.work.FriendsViewAdapter;
 import big.work.RecyclerViewAdapter;
 import big.work.RecyclerViewItemData;
 
@@ -32,6 +35,9 @@ public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
     private TabLayout tabLayout;
     private ViewPager viewpager;
+    private ArrayList<RecyclerViewItemData> dataList1;
+    RecyclerView recyclerView;
+    RecyclerViewAdapter adapter1;
     private View root;
     ArrayList fragmentList = new ArrayList<Fragment>();
     String[] temp = {"朋友","分组","群聊"};
@@ -42,10 +48,20 @@ public class HomeFragment extends Fragment {
         root = inflater.inflate(R.layout.fragment_friend, container, false);
         tabLayout = root.findViewById(R.id.friend_tab);
         viewpager = root.findViewById(R.id.friend_view_page);
+        recyclerView = root.findViewById(R.id.recycle);
+        initData1();
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        adapter1 = new RecyclerViewAdapter(dataList1);
+        recyclerView.setAdapter(adapter1);
         return root;
+    }
+    private void initData1() {
+        dataList1 = new ArrayList<>();
+        dataList1.add(new RecyclerViewItemData(0)); //0
     }
      public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        initData1();
         MPagerAdapter mPagerAdapter = new MPagerAdapter(getChildFragmentManager());
         initFragment();
         tabLayout.setupWithViewPager(viewpager);
@@ -53,8 +69,8 @@ public class HomeFragment extends Fragment {
     }
     private void initFragment() {
         fragmentList.add(new FriendsFragment());
-        fragmentList.add(new FriendsFragment());
-        fragmentList.add(new FriendsFragment());
+        fragmentList.add(new GroupFragment());
+        fragmentList.add(new GroupChatFragment());
     }
 
     class MPagerAdapter extends FragmentPagerAdapter {
