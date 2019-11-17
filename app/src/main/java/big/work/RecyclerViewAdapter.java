@@ -21,7 +21,23 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
     public RecyclerViewAdapter(ArrayList<RecyclerViewItemData> dataList) {
         this.dataList = dataList;
+
     }
+    public void addData(ArrayList<RecyclerViewItemData> dataList){
+        if (this.dataList == null)
+        {
+            this.dataList = new ArrayList<>();
+        }
+        this.dataList.addAll(dataList);
+        notifyDataSetChanged();
+    }
+    public void setData(ArrayList<RecyclerViewItemData> dataList)
+    {
+        this.dataList = dataList;
+        // 刷新列表数据
+        notifyDataSetChanged();
+    }
+
 
     @NonNull
     @Override
@@ -47,94 +63,25 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         if( holder instanceof SearchViewHolder){
-            if(position == 0) {
-                ((SearchViewHolder) holder).search.setText("搜索");
-            }
+            RecyclerViewItemData entity1 = dataList.get(position);
+            ((SearchViewHolder) holder).search.setText(entity1.getSearch());
         }
         if(holder instanceof DomesticViewHolder){
-            if(position == 1){
-                ((DomesticViewHolder) holder).user_name.setText("陈忘尘");
-                ((DomesticViewHolder) holder).chat_context.setText("色即是空，空既是色");
-                ((DomesticViewHolder) holder).chat_time.setText("下午 2:34");
-                ((DomesticViewHolder) holder).domestic_image.setImageResource(R.mipmap.tx1);
-            }
-            if(position == 2){
-                ((DomesticViewHolder) holder).user_name.setText("陈烜");
-                ((DomesticViewHolder) holder).chat_context.setText("吃外卖吃外卖吃外卖");
-                ((DomesticViewHolder) holder).chat_time.setText("上午 9:34");
-                ((DomesticViewHolder) holder).domestic_image.setImageResource(R.mipmap.tx2);
-            }
-            if(position == 4){
-                ((DomesticViewHolder) holder).user_name.setText("曹春美");
-                ((DomesticViewHolder) holder).chat_context.setText("这里有镜子");
-                ((DomesticViewHolder) holder).chat_time.setText("昨天");
-                ((DomesticViewHolder) holder).domestic_image.setImageResource(R.mipmap.tx4);
-            }
-            if(position == 5){
-                ((DomesticViewHolder) holder).user_name.setText("云计算172");
-                ((DomesticViewHolder) holder).chat_context.setText("刘涔涔（班长）：今天中午全员都要来看篮球赛");
-                ((DomesticViewHolder) holder).chat_time.setText("昨天");
-                ((DomesticViewHolder) holder).domestic_image.setImageResource(R.mipmap.tx5);
-            }
-            if(position == 6){
-                ((DomesticViewHolder) holder).user_name.setText("朱容");
-                ((DomesticViewHolder) holder).chat_context.setText("我好饿我好饿");
-                ((DomesticViewHolder) holder).chat_time.setText("星期三");
-                ((DomesticViewHolder) holder).domestic_image.setImageResource(R.mipmap.tx6);
-            }
-            if(position == 7){
-                ((DomesticViewHolder) holder).user_name.setText("余雪");
-                ((DomesticViewHolder) holder).chat_context.setText("我安全到家啦，不要担心");
-                ((DomesticViewHolder) holder).chat_time.setText("星期二");
-                ((DomesticViewHolder) holder).domestic_image.setImageResource(R.mipmap.tx7);
-            }
-            if(position == 9){
-                ((DomesticViewHolder) holder).user_name.setText("吴续莲");
-                ((DomesticViewHolder) holder).chat_context.setText("[新签名]只要做有意义的事，再晚都是有意义的");
-                ((DomesticViewHolder) holder).chat_time.setText("2019-11-2");
-                ((DomesticViewHolder) holder).domestic_image.setImageResource(R.mipmap.tx9);
-            }
-            if(position == 10){
-                ((DomesticViewHolder) holder).user_name.setText("劳动改造所");
-                ((DomesticViewHolder) holder).chat_context.setText("小白菜：好久去吃饭啊");
-                ((DomesticViewHolder) holder).chat_time.setText("2019-11-1");
-                ((DomesticViewHolder) holder).domestic_image.setImageResource(R.mipmap.tx10);
-            }
-            if(position == 12){
-                ((DomesticViewHolder) holder).user_name.setText("群通知");
-                ((DomesticViewHolder) holder).chat_context.setText("柚子...邀请你加入群 ai比赛");
-                ((DomesticViewHolder) holder).chat_time.setText("2019-11-1");
-                ((DomesticViewHolder) holder).domestic_image.setImageResource(R.mipmap.tx12);
-            }
-
-
+            RecyclerViewItemData entity2 = dataList.get(position);
+                ((DomesticViewHolder) holder).user_name.setText(entity2.getUser_name());
+                ((DomesticViewHolder) holder).chat_context.setText(entity2.getChat_context());
+                ((DomesticViewHolder) holder).chat_time.setText(entity2.getChat_time());
+                ((DomesticViewHolder) holder).domestic_image.setImageResource(entity2.getDomestic_image());
         }
-        if(holder instanceof MemberViewHolder){
-            if(position == 3){
-                ((MemberViewHolder) holder).member_user_name.setText("杨芳芳");
-                ((MemberViewHolder) holder).member_chat_context.setText("我想吃肉肉");
-                ((MemberViewHolder) holder).member_chat_time.setText("上午 00:20");
-                ((MemberViewHolder) holder).member_user_level.setText("LV6");
-                ((MemberViewHolder) holder).member_image.setImageResource(R.mipmap.tx3);
-
-            }
-            if(position == 8){
-                ((MemberViewHolder) holder).member_user_name.setText("陈绪伟");
-                ((MemberViewHolder) holder).member_chat_context.setText("大哥就是大哥");
-                ((MemberViewHolder) holder).member_chat_time.setText("2019-11-2");
-                ((MemberViewHolder) holder).member_user_level.setText("LV3");
-                ((MemberViewHolder) holder).member_image.setImageResource(R.mipmap.tx8);
-
-            }
-            if(position == 11){
-                ((MemberViewHolder) holder).member_user_name.setText("安南");
-                ((MemberViewHolder) holder).member_chat_context.setText("[新签名]lalala");
-                ((MemberViewHolder) holder).member_chat_time.setText("2019-10-31");
-                ((MemberViewHolder) holder).member_user_level.setText("LV4");
-                ((MemberViewHolder) holder).member_image.setImageResource(R.mipmap.tx11);
-
-            }
+        if(holder instanceof MemberViewHolder) {
+            RecyclerViewItemData entity3 = dataList.get(position);
+            ((MemberViewHolder) holder).member_user_name.setText(entity3.getMember_user_name());
+            ((MemberViewHolder) holder).member_chat_context.setText(entity3.getMember_chat_context());
+            ((MemberViewHolder) holder).member_chat_time.setText(entity3.getMember_chat_time());
+            ((MemberViewHolder) holder).member_user_level.setText(entity3.getMember_user_level());
+            ((MemberViewHolder) holder).member_image.setImageResource(entity3.getMember_image());
         }
+
     }
     public int getItemViewType(int position) {
         if (0 == dataList.get(position).getDataType()) {

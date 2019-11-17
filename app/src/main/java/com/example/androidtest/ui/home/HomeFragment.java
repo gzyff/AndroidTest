@@ -1,5 +1,7 @@
 package com.example.androidtest.ui.home;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,6 +20,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import com.baoyz.swipemenulistview.SwipeMenu;
+import com.baoyz.swipemenulistview.SwipeMenuCreator;
+import com.baoyz.swipemenulistview.SwipeMenuItem;
+import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.example.androidtest.FriendsFragment;
 import com.example.androidtest.GroupChatFragment;
 import com.example.androidtest.GroupFragment;
@@ -57,7 +63,7 @@ public class HomeFragment extends Fragment {
     }
     private void initData1() {
         dataList1 = new ArrayList<>();
-        dataList1.add(new RecyclerViewItemData(0)); //0
+        dataList1.add(new RecyclerViewItemData(0,"搜索")); //0
     }
      public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -98,6 +104,7 @@ public class HomeFragment extends Fragment {
             return temp[position];
         }
     }
+
 
 
 }
