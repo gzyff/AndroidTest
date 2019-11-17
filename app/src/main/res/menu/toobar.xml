@@ -2,27 +2,33 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/backup"
-        android:icon="@drawable/ic_menu_gallery"
-        android:title="bacaup"
+        android:icon="@mipmap/menu0"
+        android:title="相机"
         app:showAsAction="always"
         />
     <item
-        android:id="@+id/delete"
-        android:icon="@drawable/ic_menu_gallery"
-        android:title="bacaup"
-        app:showAsAction="always"
-        />
-    <item
-        android:id="@+id/setting"
-        android:icon="@drawable/ic_menu_gallery"
-        android:title="bacaup"
+        android:icon="@mipmap/menu1"
+        android:title="创建群聊"
         app:showAsAction="never"
         />
     <item
-        android:id="@+id/setting1"
-        android:icon="@drawable/ic_menu_gallery"
-        android:title="bacaup"
+        android:icon="@mipmap/menu2"
+        android:title="加好友"
+        app:showAsAction="never"
+        />
+    <item
+        android:icon="@mipmap/menu3"
+        android:title="扫一扫"
+        app:showAsAction="never"
+        />
+    <item
+        android:icon="@mipmap/menu4"
+        android:title="面对面快传"
+        app:showAsAction="never"
+        />
+    <item
+        android:icon="@mipmap/menu5"
+        android:title="收付款"
         app:showAsAction="never"
         />
 </menu>

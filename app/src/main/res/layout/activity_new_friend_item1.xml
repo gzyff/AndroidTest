@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="75dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:orientation="horizontal"
+    tools:context="big.work.NewFriendItem1Activity">
+    <ImageView
+        android:id="@+id/new_friend_item1_image"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="55dp"
+        android:src="@mipmap/tx46"
+        android:layout_height="55dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginLeft="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/new_friend_item1_name"
+            android:layout_width="wrap_content"
+            android:text="爱吃红烧肉的小熊"
+            android:layout_height="35dp"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/new_friend_item1_sexboy"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text=" ♀18 "
+                android:textColor="#FFFFFF"
+                android:background="#00B2EE"
+                />
+            <TextView
+                android:id="@+id/new_friend_item1_sexgirl"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text=" ♀18 "
+                android:textColor="#FFFFFF"
+                android:background="#F28665"
+                />
+            <TextView
+                android:id="@+id/new_friend_item1_from"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text=" ♀18 "
+                android:layout_marginLeft="5dp"
+                android:textColor="#FFFFFF"
+                android:background="#FFCA0F"
+                />
+            <TextView
+                android:id="@+id/new_friend_item1_common"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text=" ♀18 "
+                android:layout_marginLeft="5dp"
+                android:textColor="#FFFFFF"
+                android:background="#1263A1"
+                />
+            <TextView
+                android:id="@+id/new_friend_item1_constellation"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text=" ♀18 "
+                android:layout_marginLeft="5dp"
+                android:textColor="#FFFFFF"
+                android:background="#377375"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/new_friend_item1_case"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:text="你可能认识"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+    <ImageView
+        android:id="@+id/new_friend_item1_delete"
+        android:layout_width="22dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/delete"/>
+</RelativeLayout>

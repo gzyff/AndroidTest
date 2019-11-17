@@ -5,16 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="75dp"
-    android:gravity="center"
     tools:context="big.work.SearchActivity">
     <TextView
         android:id="@+id/search"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="15dp"
         android:hint="搜索"
         android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:textSize="30sp"
         android:background="@drawable/search_text"/>
 </RelativeLayout>

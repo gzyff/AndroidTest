@@ -4,7 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".GroupChatFragment">
-
+    tools:context=".NewFriendFragment">
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/new_friend_recycle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    />
 
 </FrameLayout>

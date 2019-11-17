@@ -1,38 +1,27 @@
 package com.example.androidtest.ui.home;
 
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import com.baoyz.swipemenulistview.SwipeMenu;
-import com.baoyz.swipemenulistview.SwipeMenuCreator;
-import com.baoyz.swipemenulistview.SwipeMenuItem;
-import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.example.androidtest.FriendsFragment;
-import com.example.androidtest.GroupChatFragment;
+import com.example.androidtest.NewFriendFragment;
 import com.example.androidtest.GroupFragment;
 import com.example.androidtest.R;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
-import big.work.FriendsViewAdapter;
 import big.work.RecyclerViewAdapter;
 import big.work.RecyclerViewItemData;
 
@@ -46,7 +35,7 @@ public class HomeFragment extends Fragment {
     RecyclerViewAdapter adapter1;
     private View root;
     ArrayList fragmentList = new ArrayList<Fragment>();
-    String[] temp = {"朋友","分组","群聊"};
+    String[] temp = {"朋友","分组","新朋友"};
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -76,7 +65,7 @@ public class HomeFragment extends Fragment {
     private void initFragment() {
         fragmentList.add(new FriendsFragment());
         fragmentList.add(new GroupFragment());
-        fragmentList.add(new GroupChatFragment());
+        fragmentList.add(new NewFriendFragment());
     }
 
     class MPagerAdapter extends FragmentPagerAdapter {
